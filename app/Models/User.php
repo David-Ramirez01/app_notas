@@ -47,15 +47,6 @@ class User extends Authenticatable
         return Hash::make($pass);;
     }
 
-
-
-
-    /* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-       /
-       /  Relación uno a muchos
-       /
-    */
-
     public function notes()
     {
         return $this->hasMany('App\Models\Notes');
