@@ -60,7 +60,7 @@ class NotesController extends Controller
             $request->completed = 1;
 
             $notes->where('id', $request->id)
-                  ->update(["completed" => $request->completed]);
+                    ->update(["completed" => $request->completed]);
         }
 
         return redirect()->route('notes.index');

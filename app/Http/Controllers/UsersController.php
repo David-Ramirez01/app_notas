@@ -13,18 +13,18 @@ class UsersController extends Controller
 {
     public function index() 
     {
-    	return view('users.login.login');
+        return view('users.login.login');
     }
 
     public function register()
     {
-    	return view('users.login.register');
+        return view('users.login.register');
     }
 
     public function signup (RegisterUsersRequest $request, User $user)
     {
-    	User::create($request->only("name", "email") + ["password" => $user->encrypt($request->password)]);
-    	return redirect()->route('login');
+        User::create($request->only("name", "email") + ["password" => $user->encrypt($request->password)]);
+        return redirect()->route('login');
     }
 
 
