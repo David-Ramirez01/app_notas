@@ -46,9 +46,7 @@ class UsersController extends Controller
     {
         Auth::logout();
 
-        //Invalida la sesión y genera una nueva
         $request->session()->invalidate();
-        // Genera un nuevo Token
         $request->session()->regenerateToken();
         return redirect()->route('home');
     }
