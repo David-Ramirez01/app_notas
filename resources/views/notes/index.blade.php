@@ -48,8 +48,6 @@
 							</form>
 						</span>
 					</div>
-
-					{{-- Check para Terminar la tarea --}}
 					<div class="p-2 mx-5">
 						<form  action="{{ route('notes.completed', $note) }}" method="POST">
 							@csrf     @method('PUT')
